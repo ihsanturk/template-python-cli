@@ -2,6 +2,9 @@ Python CLI Template
 ===================
 ihsan
 
+image:https://builtwithnix.org/badge.svg["built with nix",
+                                         link="https://builtwithnix.org/"]
+
 This is a ready to go basic Python template project to increment a given number.
 
  nix-shell
