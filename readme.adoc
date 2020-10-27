@@ -1,0 +1,21 @@
+Python CLI Template
+===================
+ihsan
+
+This is a ready to go basic Python template project to increment a given number.
+
+ nix-shell
+
+[source,docopt]
+----
+$ templateproject
+ Usage:
+   templateproject incr [options] <number>
+   templateproject (-h | --help)
+   templateproject --version
+
+ Options:
+   -x <number>, --incrby <number>   How many numbers will be incresed [default: 1].
+   -h --help                        Show this screen.
+   --version                        Show the version.
+----
