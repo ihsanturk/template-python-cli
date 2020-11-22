@@ -1,0 +1,16 @@
+#!/bin/sh
+
+system=macos # or linux
+oldname=$(grep pname default.nix | grep -o '".*"' | tr -d '"')
+targetname=$1
+
+usage() { >&2 echo "$(basename $0) 'new project name'"; }
+
+[ -z $targetname ] && { usage; exit 2; }
+
+if [ "$system" = "macos" ]; then
+	fd -tf -x sed -i.delete "s/$oldname/$targetname/g"
+	fd -tf -e delete -x rm {}
+else
+	fd -tf -x sed -i "s/$oldname/$targetname/g"
+fi
