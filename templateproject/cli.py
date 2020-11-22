@@ -14,9 +14,9 @@ Options:
 from docopt import docopt
 
 def main():
-	args = docopt(__doc__, version='0.0.1')
-	if args['incr']:
-		print(int(args['<number>']) + int(args['--incrby']))
+	arg = docopt(__doc__, version='0.0.1')
+	if arg['incr']:
+		print(int(arg['<number>']) + int(arg['--incrby']))
 
 if __name__ == '__main__':
 	main()
